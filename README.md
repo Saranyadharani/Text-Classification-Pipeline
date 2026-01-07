@@ -1,75 +1,91 @@
-AG News Text Classification with DistilBERT
-📌 Overview
-A complete text classification pipeline that classifies news articles into 4 categories using DistilBERT. Achieves 93.89% accuracy on the AG News dataset.
+Text Classification Pipeline (DistilBERT + AG News)
 
-🚀 Quick Start
-Run the entire code in ONE Google Colab cell (enable GPU):
+A complete, end-to-end text classification pipeline built with Hugging Face Transformers, PyTorch, and scikit-learn, designed to run in one Google Colab cell.
 
-python
-# Copy the complete pipeline code into Colab
-# Runtime → Change runtime type → GPU
-# Execute the cell
-📊 Results
-Accuracy: 93.89%
+🚀 Features
 
-Loss: 0.2018
+Uses AG News dataset (World, Sports, Business, Sci/Tech)
 
-Model: DistilBERT-base-uncased
+Fine-tunes DistilBERT
 
-Dataset: AG News (127,600 articles)
+Automatic train/test split
 
-Categories: World, Sports, Business, Sci/Tech
+Training, evaluation, and prediction included
 
-🎯 Sample Predictions
-text
-📝 Sample 1: "The government passed a new law..." → World (80.61%)
-📝 Sample 2: "The basketball team won..." → Sports (98.60%)
-📝 Sample 3: "New AI technology breakthrough..." → Sci/Tech (96.52%)
-📝 Sample 4: "Federal Reserve raises interest rates..." → Business (97.94%)
-📈 Training Performance
-Epoch	Train Loss	Val Accuracy
-1	0.2369	93.89%
-2	0.2605	94.67%
-3	0.0891	94.79%
-4	0.1453	94.74%
-🔧 Features
-✅ Automatic Dataset Download - AG News from GitHub
-✅ Complete Pipeline - Data to predictions in one cell
-✅ High Accuracy - 93.89% on test set
-✅ Confidence Scores - Top-3 predictions with percentages
-✅ Easy Customization - Modify for your own dataset
+Fallback to synthetic data if download fails
 
-📁 Dataset
-Source: AG News public dataset
+Achieves ~94% accuracy
 
-Size: 127,600 samples
+📊 Dataset
 
-Split: 80% train (102,080), 20% test (25,520)
+AG News (127,600 samples)
 
-Classes: Balanced - 31,900 samples each category
+4 balanced classes:
 
-🛠️ Technical Details
-python
-# Key Parameters
-model_name = "distilbert-base-uncased"
-learning_rate = 2e-5
-batch_size = 8
-epochs = 4
-max_length = 128
-📦 Output Files
-text
-results/     # Model checkpoints
-logs/        # Training logs
-Console output with all metrics
-💡 How to Use Your Own Data
-Modify label_names with your categories
+World
 
-Replace dataset loading with your texts/labels
+Sports
 
-Adjust num_labels in model initialization
+Business
 
-Run the pipeline
+Sci/Tech
 
-⚠️ Requirements
-bash
-pip install torch transformers datasets scikit-learn pandas numpy
+🧠 Model
+
+distilbert-base-uncased
+
+Hugging Face Trainer API
+
+Cross-entropy loss with accuracy metric
+
+▶️ How to Run
+
+Open Google Colab
+
+Paste the full script into one cell
+
+Run the cell — everything is handled automatically
+
+🧪 Output
+
+Training & validation metrics per epoch
+
+Final test accuracy and loss
+
+Predictions with confidence scores
+
+Top-k class probabilities for sample inputs
+
+📦 Requirements
+
+Python 3.8+
+
+transformers
+
+datasets
+
+torch
+
+scikit-learn
+
+pandas
+
+numpy
+
+(Automatically available in Google Colab)
+
+✅ Example Results
+
+Test Accuracy: ~93–95%
+
+Fast training with GPU support
+
+📌 Use Cases
+
+News classification
+
+NLP fine-tuning demos
+
+Text classification projects
+
+Learning Hugging Face Trainer workflow
