@@ -251,32 +251,3 @@ for i, name in enumerate(label_names):
     print(f"  {i+1}. {name}")
 print("="*50)
 
-# Clean notebook metadata
-!pip install -q nbformat
-
-import nbformat
-import json
-import os
-
-# Read your notebook
-with open('Text Classification Pipeline.ipynb', 'r', encoding='utf-8') as f:
-    notebook = nbformat.read(f, as_version=4)
-
-# Clean metadata
-for cell in notebook.cells:
-    if 'metadata' in cell:
-        # Remove problematic fields
-        if 'colab' in cell.metadata:
-            del cell.metadata['colab']
-        if 'id' in cell.metadata:
-            del cell.metadata['id']
-
-# Remove widgets from metadata
-if 'widgets' in notebook.metadata:
-    del notebook.metadata['widgets']
-
-# Save cleaned version
-with open('CLEAN_notebook.ipynb', 'w', encoding='utf-8') as f:
-    nbformat.write(notebook, f)
-
-print("✅ Notebook cleaned! Upload 'CLEAN_notebook.ipynb' to GitHub")
