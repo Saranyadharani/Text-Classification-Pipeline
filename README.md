@@ -39,6 +39,11 @@ A complete text classification system that uses **DistilBERT** to classify news 
 
 **Final Test Accuracy: 93.89%**
 
+<img width="1167" height="401" alt="image" src="https://github.com/user-attachments/assets/5a8693e5-bcf1-4752-a170-0992591541be" />
+<img width="1232" height="449" alt="image" src="https://github.com/user-attachments/assets/bb388a13-67c4-4b80-aff9-9e72696d319b" />
+
+
+
 ## 🚦 Quick Start
 ```python
 # Run in Google Colab (one cell)
