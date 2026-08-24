@@ -1,21 +1,21 @@
-# 🚀 Text Classification Pipeline with DistilBERT
+# Text Classification Pipeline with DistilBERT
 
-## 📊 Overview
+## Overview
 A complete text classification system that uses **DistilBERT** to classify news articles into **4 categories** with **93.89% accuracy**.
 
-## 🎯 Features
-- ✅ End-to-end pipeline (data → model → predictions)
-- ✅ AG News dataset: 127,600 labeled articles
-- ✅ High accuracy: 93.89% on test set
-- ✅ Fast predictions with confidence scores
-- ✅ Clean, modular code ready for Colab
+##  Features
+- End-to-end pipeline (data → model → predictions)
+- AG News dataset: 127,600 labeled articles
+- High accuracy: 93.89% on test set
+- Fast predictions with confidence scores
+- Clean, modular code ready for Colab
 
-## 📦 Dataset
+##  Dataset
 **AG News Categories:**
-- 🌍 World
-- ⚽ Sports
-- 💼 Business
-- 🔬 Sci/Tech
+- World
+- Sports
+- Business
+- Sci/Tech
 
 **Statistics:**
 - Total samples: 127,600
@@ -23,7 +23,7 @@ A complete text classification system that uses **DistilBERT** to classify news 
 - Test: 25,520 (20%)
 - Balanced classes: 31,900 per category
 
-## 🏗️ Model Architecture
+##  Model Architecture
 - **Base Model**: `distilbert-base-uncased`
 - **Classifier**: Custom head for 4 classes
 - **Tokenizer**: BERT tokenizer (128 max length)
@@ -41,15 +41,3 @@ A complete text classification system that uses **DistilBERT** to classify news 
 
 <img width="1167" height="401" alt="image" src="https://github.com/user-attachments/assets/5a8693e5-bcf1-4752-a170-0992591541be" />
 <img width="1232" height="449" alt="image" src="https://github.com/user-attachments/assets/bb388a13-67c4-4b80-aff9-9e72696d319b" />
-
-
-
-## 🚦 Quick Start
-```python
-# Run in Google Colab (one cell)
-# 1. Copy the entire pipeline code
-
-
-# 2. Paste into a Colab cell
-# 3. Run with GPU enabled
-# 4. Get predictions instantly!
