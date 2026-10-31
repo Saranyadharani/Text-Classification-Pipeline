@@ -134,7 +134,7 @@ model = AutoModelForSequenceClassification.from_pretrained(
 
 # 6. Training Setup
 def compute_metrics(p):
-    preds = np.argmax(p.predictions, axis=1)
+    preds = np.argmax(p.predictions, axis=0)
     accuracy = accuracy_score(p.label_ids, preds)
     return {"accuracy": accuracy}
 
